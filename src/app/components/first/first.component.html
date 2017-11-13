@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let i of globalService.beforeSort">
+    name:{{i.name}} age:{{i.age}}
+  </li>
+</ul>
+
+<button (click)="globalService.sortByAge()">
+  sort age
+</button>
+
+<button (click)="globalService.sortByName()">
+  sort name
+</button>
