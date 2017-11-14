@@ -25,6 +25,10 @@ export class GlobalService {
     {
       name: 'Саша',
       age: 6
+    },
+        {
+      name: 'Коля',
+      age: 3
     }
   ];
   toSort: object [];
@@ -33,8 +37,10 @@ export class GlobalService {
     return first.age - second.age;
   };
 
-  sortName(first, second) {
-    return first.name - second.name;
+  sortName(a, b) { 
+  if(a.name[0] < b.name[0]) return -1;
+  if(a.name[0] > b.name[0]) return 1;
+    return 0;
   };
 
   sortByAge() {
